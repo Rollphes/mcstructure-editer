@@ -1,7 +1,7 @@
-$('#editfile').change(function (e) {
+$("#editfile").change(function (e) {
   var result = e.target.files[0];
   var reader = new FileReader();
-  console.log('test');
+  console.log("test");
   if (result.name.slice(-12) == ".mcstructure") {
     reader.onload = function (evt) {
       var allData = evt.target.result; //ファイル内容を全て取得
