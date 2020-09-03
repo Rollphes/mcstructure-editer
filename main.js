@@ -1,4 +1,5 @@
-$("#editfile").addEventListener('change', function(e) {
+$(function() {
+$("#editfile").change(function(e) {
   var result = e.target.files[0];
   var reader = new FileReader();
   console.log("test");
@@ -113,7 +114,8 @@ $("#editfile").addEventListener('change', function(e) {
             let tagname_result = tagname(i,tagname_count);
             let value_type = allData.charCodeAt(i + 2 + 1 + tagname_count);
         }*/
+       }
       }
     }
-  }
+  });
 });
