@@ -4,7 +4,15 @@ $(function() {
     var reader = new FileReader();
     console.log('test');
     reader.onload = function() {
-      var ar = new Uint8Array(reader.result);
+      var data = reader.result;
+      nbt.parse(data, function(error, data) {
+        if (error) {
+          throw error;
+        }
+
+        console.log(data.value.stringTest.value);
+        console.log(data.value['nested compound test'].value);
+      });
     }
 
     reader.readAsArrayBuffer(file);
