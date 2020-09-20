@@ -4,7 +4,7 @@ $(function() {
     var reader = new FileReader();
     console.log('test');
     reader.onload = function() {
-      var data = reader.result;
+      var data = reader.result
       nbt.parse(data, function(error, data) {
         if (error) {
           throw error;
