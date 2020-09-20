@@ -405,7 +405,7 @@
     function read(dataType, size) {
       var val = dataView['get' + dataType](self.offset);
       self.offset += size;
-      console.log(val);
+      console.log(dataType);
       return val;
     }
 
