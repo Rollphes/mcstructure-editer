@@ -401,7 +401,6 @@
 
     var arrayView = new Uint8Array(buffer);
     var dataView = new DataView(arrayView.buffer);
-    console.log(JSON.stringify(this));
     function read(dataType, size) {
       var val = dataView['get' + dataType](self.offset);
       self.offset += size;
@@ -593,7 +592,7 @@
   /**
   * @param {ArrayBuffer|Buffer} data - an uncompressed NBT archive
   * @returns {{name: string, value: Object.<string, Object>}}
-  *     a named compound
+  *     a named compound8
   *
   * @see module:nbt.parse
   * @see module:nbt.writeUncompressed
