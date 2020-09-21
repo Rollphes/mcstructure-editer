@@ -9,8 +9,7 @@ $(function() {
           throw error;
         }
 
-        console.log(data.value.stringTest.value);
-        console.log(data.value['nested compound test'].value);
+        console.log(JSON.stringify(data));
       });
     }
 
