@@ -401,7 +401,7 @@
 
     var arrayView = new Uint8Array(buffer);
     var dataView = new DataView(arrayView.buffer);
-
+    console.log(this);
     function read(dataType, size) {
       console.log(dataType);
       var val = dataView['get' + dataType](self.offset);
