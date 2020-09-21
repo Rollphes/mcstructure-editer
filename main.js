@@ -10,6 +10,7 @@ $(function() {
         }
 
         copyTextToClipboard(JSON.stringify(data));
+        alert("コピーしました");
       });
     }
 
