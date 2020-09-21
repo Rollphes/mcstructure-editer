@@ -403,7 +403,6 @@
     var dataView = new DataView(arrayView.buffer);
     console.log(this);
     function read(dataType, size) {
-      console.log(dataType);
       var val = dataView['get' + dataType](self.offset);
       self.offset += size;
       return val;
