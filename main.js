@@ -18,3 +18,21 @@ $(function() {
     reader.readAsArrayBuffer(file);
   });
 });
+var mcs = {};
+mcs.parse = function(buffer) {
+  if (!buffer) {
+    throw new Error('Argument "buffer" is falsy');
+  }
+
+  var self = this;
+  this.offset = 0;
+
+  var arrayView = new Uint8Array(buffer);
+  var dataView = new DataView(arrayView.buffer);
+  function read(dataType, size) {
+    var val = dataView['get' + dataType](self.offset);
+    self.offset += size;
+    return val;
+  }
+
+}
